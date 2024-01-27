@@ -1,4 +1,4 @@
-defmodule TableauDemoHeex.RootLayout do
+defmodule XmasPhotoshopping.RootLayout do
   use Tableau.Layout
   use Phoenix.Component
 
@@ -7,14 +7,14 @@ defmodule TableauDemoHeex.RootLayout do
     <!DOCTYPE HTML>
     <html>
       <head>
-        <title>Tableau EEx Demo</title>
+        <title>X-Mas Photoshopping</title>
         <link rel="stylesheet" type="text/css" href="/css/site.css" />
       </head>
-      <body>
+      <body class="m-4 flex flex-col items-center dark:bg-gray-50">
         <%= render(@inner_content) %>
       </body>
       <%= if Mix.env() == :dev do %>
-        <TableauDemoHeex.live_reload />
+        <XmasPhotoshopping.live_reload />
       <% end %>
     </html>
     """

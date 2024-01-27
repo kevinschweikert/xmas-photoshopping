@@ -1,6 +1,6 @@
-# Tableau Demo Heex
+# X-Mas Photoshopping
 
-This is an example project with Heex-Templates, Hot-Reloading and Tailwind CSS.
+This is the collection of the yearly family x-mas photoshopping reeults
 
 To start the development server, run:
 

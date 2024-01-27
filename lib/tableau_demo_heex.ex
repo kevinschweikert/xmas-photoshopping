@@ -1,4 +1,4 @@
-defmodule TableauDemoHeex do
+defmodule XmasPhotoshopping do
   use Phoenix.Component
 
   def live_reload(assigns) do

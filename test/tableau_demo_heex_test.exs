@@ -1,8 +1,8 @@
-defmodule TableauDemoHeexTest do
+defmodule XmasPhotoshoppingTest do
   use ExUnit.Case
-  doctest TableauDemoHeex
+  doctest XmasPhotoshopping
 
   test "greets the world" do
-    assert TableauDemoHeex.hello() == :world
+    assert XmasPhotoshopping.hello() == :world
   end
 end

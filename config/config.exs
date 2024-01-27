@@ -23,4 +23,8 @@ config :tailwind,
 
 config :tableau, :assets, tailwind: {Tailwind, :install_and_run, [:default, ~w(--watch)]}
 
+config :tableau, Tableau.PageExtension,
+  enabled: true,
+  dir: "_pages"
+
 import_config "#{Mix.env()}.exs"
