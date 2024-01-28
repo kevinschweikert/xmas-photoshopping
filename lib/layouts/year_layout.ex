@@ -7,7 +7,11 @@ defmodule XmasPhotoshopping.YearLayout do
   def template(assigns) do
     ~H"""
     <h1 class="text-4xl"><%= @page.year %></h1>
-    <img class="rounded-sm" src={"https://picsum.photos/800?id=#{@page.year}"} alt={@page.year} />
+    <img
+      class="rounded-sm"
+      src={"#{@site.config.base_path}/xmas-photoshopping-#{@page.year}.jpg"}
+      alt={@page.year}
+    />
     <.link href={"#{@site.config.base_path}/"}> Back </.link>
     """
   end

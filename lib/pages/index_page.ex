@@ -9,7 +9,13 @@ defmodule XmasPhotoshopping.IndexPage do
     </div>
 
     <div class="grid grid-cols-4 gap-4">
-      <.year :for={year <- @pages} year={year} base_path={@site.config.base_path} />
+      <.year
+        :for={
+          year <- Enum.sort_by(@pages, fn page -> page.opts.year |> String.to_integer() end, :desc)
+        }
+        year={year}
+        base_path={@site.config.base_path}
+      />
     </div>
     """
   end
@@ -18,7 +24,11 @@ defmodule XmasPhotoshopping.IndexPage do
     ~H"""
     <div>
       <.link href={@base_path <> @year.permalink}>
-        <img class="rounded-sm" src={"https://picsum.photos/200?id=#{:rand.uniform(100)}"} alt="2023" />
+        <img
+          class="rounded-sm aspect-square object-cover"
+          src={"#{@base_path}/xmas-photoshopping-#{@year.opts.year}.jpg"}
+          alt={@year.opts.year}
+        />
         <span><%= @year.opts.year %></span>
       </.link>
     </div>

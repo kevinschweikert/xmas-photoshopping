@@ -1,6 +1,6 @@
 import Config
 
-config :tableau, :config, url: "http://localhost:4999"
+config :tableau, :config, url: "http://localhost:4999", include_dir: "static"
 
 config :tableau, :reloader,
   patterns: [
