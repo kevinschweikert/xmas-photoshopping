@@ -8,7 +8,7 @@ defmodule XmasPhotoshopping.RootLayout do
     <html>
       <head>
         <title>X-Mas Photoshopping</title>
-        <link rel="stylesheet" type="text/css" href="/css/site.css" />
+        <link rel="stylesheet" type="text/css" href={"#{@site.config.base_path}/css/site.css"} />
       </head>
       <body class="m-4 flex flex-col items-center dark:bg-gray-50">
         <%= render(@inner_content) %>

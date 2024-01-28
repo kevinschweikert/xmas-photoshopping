@@ -1,3 +1,5 @@
 import Config
 
-config :tableau, :config, url: "https://tableau-heex-demo.example.com"
+config :tableau, :config,
+  url: System.fetch_env!("URL"),
+  base_path: System.fetch_env!("BASE_PATH")
