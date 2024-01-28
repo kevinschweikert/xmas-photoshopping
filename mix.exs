@@ -22,7 +22,8 @@ defmodule XmasPhotoshopping.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:tableau, "~> 0.15"},
+      {:tableau,
+       git: "https://github.com/kevinschweikert/tableau", branch: "fix/base-path-schema"},
       {:phoenix_live_view, "~> 0.20.1"},
       {:tailwind, "~> 0.2", runtime: Mix.env() == :dev}
     ]

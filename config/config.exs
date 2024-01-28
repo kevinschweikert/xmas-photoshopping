@@ -25,6 +25,7 @@ config :tableau, :assets, tailwind: {Tailwind, :install_and_run, [:default, ~w(-
 
 config :tableau, Tableau.PageExtension,
   enabled: true,
-  dir: "_pages"
+  dir: "_pages",
+  permalink: "/year/:year"
 
 import_config "#{Mix.env()}.exs"
